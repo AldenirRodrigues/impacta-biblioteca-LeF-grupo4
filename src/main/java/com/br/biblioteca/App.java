@@ -1,13 +1,7 @@
 package com.br.biblioteca;
 
-import com.br.biblioteca.domain.Author;
-import com.br.biblioteca.domain.Book;
-import com.br.biblioteca.domain.Client;
-import com.br.biblioteca.domain.Publisher;
-import com.br.biblioteca.services.AuthorService;
-import com.br.biblioteca.services.BookService;
-import com.br.biblioteca.services.ClientService;
-import com.br.biblioteca.services.PublisherService;
+import com.br.biblioteca.domain.*;
+import com.br.biblioteca.services.*;
 
 /**
  * Hello world!
@@ -37,5 +31,14 @@ public class App
 
         System.out.println("Dado de livros...");
         System.out.println(bookSvc.getAll());
+
+        var student = new StudentService();
+        System.out.println("Dados de estudantes...");
+
+        student.add(new Student("2202568", "Matheus Alves de Lima"));
+        student.add(new Student("2202147", "Rebeca Menezes Costa"));
+        student.add(new Student("2203020", "Caio Henrique Munhoz"));
+        student.add(new Student("2203412", "Aldenir Rodrigues Almeida"));
+        System.out.println(student.getAll());
     }
 }
